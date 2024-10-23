@@ -1,0 +1,26 @@
+{
+  "deer": {
+    "name": "Deer",
+    "hp": 10,
+    "exp_min": 1,
+    "exp_max": 5,
+    "dmg_min": 0,
+    "dmg_max": 1
+  },
+  "boar": {
+    "name": "Boar",
+    "hp": 10,
+    "exp_min": 3,
+    "exp_max": 10,
+    "dmg_min": 0,
+    "dmg_max": 5
+  },
+  "wolf": {
+    "name": "Wolf",
+    "hp": 15,
+    "exp_min": 5,
+    "exp_max": 20,
+    "dmg_min": 1,
+    "dmg_max": 15
+  }
+}

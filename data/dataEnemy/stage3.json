@@ -1,0 +1,26 @@
+{
+  "ice_slime": {
+    "name": "Ice Slime",
+    "hp": 50,
+    "exp_min": 25,
+    "exp_max": 50,
+    "dmg_min": 20,
+    "dmg_max": 50
+  },
+  "ice_wolf": {
+    "name": "Ice Wolf",
+    "hp": 100,
+    "exp_min": 50,
+    "exp_max": 150,
+    "dmg_min": 40,
+    "dmg_max": 80
+  },
+  "ice_worm": {
+    "name": "Ice Worm",
+    "hp": 250,
+    "exp_min": 100,
+    "exp_max": 250,
+    "dmg_min": 50,
+    "dmg_max": 120
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "slime": {
+    "name": "Slime",
+    "hp": 20,
+    "exp_min": 10,
+    "exp_max": 25,
+    "dmg_min": 5,
+    "dmg_max": 15
+  },
+  "living_rock": {
+    "name": "Living Rock",
+    "hp": 30,
+    "exp_min": 15,
+    "exp_max": 30,
+    "dmg_min": 5,
+    "dmg_max": 20
+  },
+  "rock_wolf": {
+    "name": "Rock Wolf",
+    "hp": 50,
+    "exp_min": 20,
+    "exp_max": 50,
+    "dmg_min": 10,
+    "dmg_max": 30
+  }
+}

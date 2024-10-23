@@ -1,0 +1,10 @@
+{
+    "stats": {
+        "hp": 10,
+        "mp": 20,
+        "lvl": 7,
+        "exp": 207,
+        "stage": 3,
+        "stage_max": 3
+    }
+}
