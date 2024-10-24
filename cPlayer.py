@@ -11,8 +11,8 @@ class Player:
         self.hp = 10
         self.mp = 20
         self.exp = 0
-        self.stage_max = 1
-        self.stage = 3
+        self.stage_max = 3
+        self.stage = 1
         self.load_player()
 
     # Spieler-Daten aus JSON laden

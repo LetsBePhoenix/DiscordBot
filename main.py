@@ -1,10 +1,13 @@
 import os
 import random
+import time
+
 import discord
 from discord.ext import commands
 
 from cPlayer import Player
 from cEnemy import Enemy
+from cTime import Time
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -49,43 +52,54 @@ async def help(interaction: discord.Interaction):
 
 @bot.tree.command(name="info", description="Here you can see YOUR stats")
 async def info(interaction: discord.Interaction):
+    cdTime = Time(interaction.user.id)
+    if cdTime.testcd("info"):
+        # Erstelle und lade Spieler-Daten
+        player_create(interaction.user.id, interaction.user.name)
 
-    # Erstelle und lade Spieler-Daten
-    player_create(interaction.user.id, interaction.user.name)
+        # Zeige Spieler-Daten in Discord
+        embed = discord.Embed(title=f"{interaction.user.name}", color=discord.Color.blue())
+        embed.add_field(name="Level", value=player.lvl, inline=False)
+        embed.add_field(name="Exp", value=player.exp, inline=False)
+        embed.add_field(name="HP", value=player.hp, inline=False)
+        embed.add_field(name="MP", value=player.mp, inline=False)
+        embed.add_field(name="Stage", value=f"{player.stage}/{player.stage_max}", inline=False)
+        await interaction.response.send_message(embed=embed, ephemeral=True)
 
-    # Zeige Spieler-Daten in Discord
-    embed = discord.Embed(title=f"{interaction.user.name}", color=discord.Color.blue())
-    embed.add_field(name="Level", value=player.lvl, inline=False)
-    embed.add_field(name="Exp", value=player.exp, inline=False)
-    embed.add_field(name="HP", value=player.hp, inline=False)
-    embed.add_field(name="MP", value=player.mp, inline=False)
-    embed.add_field(name="Stage", value=f"{player.stage}/{player.stage_max}", inline=False)
-    await interaction.response.send_message(embed=embed, ephemeral=True)
-
-    # Speichere Spieler-Daten
-    player_save()
+        # Speichere Spieler-Daten
+        player_save()
+    else:
+        embed = discord.Embed(title="Wait there is a CoolDown!", color=discord.Color.red())
+        await interaction.response.send_message(embed=embed, ephemeral=True)
 
 
 @bot.tree.command(name="hunt", description="Hunts enemies on your stage")
 async def hunt(interaction: discord.Interaction):
+    cdTime = Time(interaction.user.id)
+    if cdTime.testcd("hunt"):
+        # Erstelle und lade Spieler-Daten
+        player_create(interaction.user.id, interaction.user.name)
 
-    # Erstelle und lade Spieler-Daten
-    player_create(interaction.user.id, interaction.user.name)
+        # Code
+        enemy = Enemy(player.stage)
+        enemy_exp = random.randint(enemy.exp_min, enemy.exp_max)
+        enemy_dmg = random.randint(enemy.dmg_min, enemy.dmg_max)
+        embed = discord.Embed(title=f"{enemy.name}: {enemy.rarity}", color=enemy.enemy_color)
+        embed.add_field(name="HP", value=f"{enemy.hp}/{enemy.hp_max}", inline=False)
+        embed.add_field(name="Exp", value=f"{enemy_exp}", inline=False)
+        embed.add_field(name="Dmg", value=f"{enemy_dmg}", inline=False)
+        if enemy.rarity == "Legendary" or enemy.rarity == "Mythic":
+            await interaction.response.send_message(embed=embed, ephemeral=False)
+        else:
+            await interaction.response.send_message(embed=embed, ephemeral=True)
 
-    # Code
-    enemy = Enemy(player.stage)
-    enemy_exp = random.randint(enemy.exp_min, enemy.exp_max)
-    enemy_dmg = random.randint(enemy.dmg_min, enemy.dmg_max)
-    embed = discord.Embed(title=f"{enemy.name}: {enemy.rarity}", color=enemy.enemy_color)
-    embed.add_field(name="HP", value=f"{enemy.hp}/{enemy.hp_max}", inline=False)
-    embed.add_field(name="Exp", value=f"{enemy_exp}", inline=False)
-    embed.add_field(name="Dmg", value=f"{enemy_dmg}", inline=False)
-    await interaction.response.send_message(embed=embed, ephemeral=True)
+        player.exp += enemy_exp
 
-    player.exp += enemy_exp
-
-    # Speichere Spieler-Daten
-    player_save()
+        # Speichere Spieler-Daten
+        player_save()
+    else:
+        embed = discord.Embed(title="Wait there is a CoolDown!", color=discord.Color.red())
+        await interaction.response.send_message(embed=embed, ephemeral=True)
 
 
 @bot.tree.command(name="cs", description="Changes Stage +1")
@@ -104,4 +118,16 @@ async def cs(interaction: discord.Interaction):
     player_save()
 
 
-bot.run("DiscordToken")
+@bot.tree.command(name="cd", description="Cooldown")
+async def cd(interaction: discord.Interaction):
+    player_create(interaction.user.id, interaction.user.name)
+    cdTime = Time(interaction.user.id)
+
+    embed = discord.Embed(title="Your cool downs:", color=discord.Color.blue())
+    embed.add_field(name="Hunt", value=cdTime.gettimecd("hunt"))
+    embed.add_field(name="Info", value=cdTime.gettimecd("info"))
+    embed.add_field(name="Search", value=cdTime.gettimecd("search"))
+    await interaction.response.send_message(embed=embed, ephemeral=True)
+
+
+bot.run("")
