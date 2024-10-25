@@ -1,19 +1,25 @@
 {
     "cd": {
-        "cd_hunt": 1729878948,
-        "cd_info": 1729854479,
+        "cd_hunt": 1729882725,
+        "cd_info": 1729883866,
         "cd_search": 0,
         "cd_daily": "2024-10-25"
     },
     "stats": {
         "hp": 10,
         "mp": 20,
-        "lvl": 3,
-        "exp": 586,
+        "lvl": 5,
+        "exp": 305,
         "stage": 2,
         "stage_max": 3
     },
     "inv": {
-        "coin": 7420
+        "coin": 7749
+    },
+    "skills": {
+        "stamina": 1,
+        "strength": 1,
+        "fishing": 1,
+        "sanity": 1
     }
 }

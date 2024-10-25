@@ -21,6 +21,7 @@ players = {}
 global player
 
 def player_create(playerID, playerName):
+    global player
     player = Player(playerID, playerName)
 
 
@@ -153,8 +154,8 @@ async def daily(interaction: discord.Interaction):
     player.inventory.save_inventory()
 
 
-@bot.tree.command(name="gamble", description="You can gamble")
-async def gamble(interaction: discord.Interaction, ammount: int):
+@bot.tree.command(name="casino_gamble", description="You can gamble")
+async def casino_gamble(interaction: discord.Interaction, ammount: int):
     player_create(interaction.user.id, interaction.user.name)
     # Lade jackpot aus globals
     with open(f"data\\dataLibrary\\globals.json", "r") as file:
@@ -192,17 +193,19 @@ async def gamble(interaction: discord.Interaction, ammount: int):
 
 @bot.tree.command(name="inv", description="Opens the Inventory")
 async def inv(interaction: discord.Interaction):
+    player_create(interaction.user.id, interaction.user.name)
     embed = discord.Embed(title="Inventory", colour=discord.Color.blue())
     player_create(interaction.user.id, interaction.user.name)
     embed.add_field(name="Coins", value=player.inventory.coin, inline=False)
     await interaction.response.send_message(embed=embed, ephemeral=True)
 
 
-@bot.tree.command(name="casinohelp", description="There are the Casino-Functions")
-async def casinohelp(interaction: discord.Interaction):
+@bot.tree.command(name="casino_help", description="There are the Casino-Functions")
+async def casino_help(interaction: discord.Interaction):
     embed = discord.Embed(title="Casino-HelpCenter", color=discord.Color.red())
     embed.add_field(name="/gamble", value="Here you can gamble with your coins", inline=False)
     embed.add_field(name="Info", value="Casinos have a high risk of addiction and are only for entertainment", inline=False)
+    embed.add_field(name="Function", value="The half of a lose will go to the price-pool of the Jackpot!")
     embed.add_field(name="Specs", value="0,1% Jackpot\n30% Winning\nRest Loosing", inline=False)
     await interaction.response.send_message(embed=embed, ephemeral=True)
 
