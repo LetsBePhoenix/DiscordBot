@@ -215,4 +215,4 @@ async def casinohelp(interaction: discord.Interaction):
     await interaction.response.send_message(embed=embed, ephemeral=True)
 
 
-bot.run("MTI5NTMwMjU1MzYxMjg0NTExOQ.Go3XdD.nZj30NeRy1VzzFWIs7z0SiK-F0kQDSZ-BbGhNI")
+bot.run("")
