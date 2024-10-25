@@ -1,3 +1,4 @@
+import datetime
 import json
 import os.path
 import time
@@ -9,6 +10,7 @@ class Time:
         self.cd_hunt = 0
         self.cd_info = 0
         self.cd_search = 0
+        self.cd_daily = 0
 
         self.getcd()
 
@@ -21,6 +23,7 @@ class Time:
                     self.cd_hunt = data["cd"]["cd_hunt"]
                     self.cd_info = data["cd"]["cd_info"]
                     self.cd_search = data["cd"]["cd_search"]
+                    self.cd_daily = data["cd"]["cd_daily"]
 
     def savecd(self):
         if os.path.exists(f"data\\dataPlayer\\{self.playerID}.json"):
@@ -32,7 +35,8 @@ class Time:
         data["cd"] = {
             "cd_hunt": self.cd_hunt,
             "cd_info": self.cd_info,
-            "cd_search": self.cd_search
+            "cd_search": self.cd_search,
+            "cd_daily": self.cd_daily
         }
         with open(f"data\\dataPlayer\\{self.playerID}.json", "w") as file:
             json.dump(data, file, indent=4)
@@ -59,6 +63,13 @@ class Time:
                 return True
             else:
                 return False
+        if type == "daily":
+            if self.cd_daily != str(datetime.date.today()):
+                self.cd_daily = str(datetime.date.today())
+                self.savecd()
+                return True
+            else:
+                return False
 
     def gettimecd(self, type):
         if type == "hunt":
@@ -79,3 +90,8 @@ class Time:
                 return "Ready"
             else:
                 return f"{self.cd_search + cd - round(time.time())}s"
+        if type == "daily":
+            if self.cd_daily == str(datetime.date.today()):
+                return "Already collected"
+            else:
+                return "Ready"
