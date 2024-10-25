@@ -1,15 +1,19 @@
 {
     "cd": {
-        "cd_hunt": 1729766351,
-        "cd_info": 1729766379,
-        "cd_search": 0
+        "cd_hunt": 1729854475,
+        "cd_info": 1729854479,
+        "cd_search": 0,
+        "cd_daily": "2024-10-24"
     },
     "stats": {
         "hp": 10,
         "mp": 20,
         "lvl": 4,
-        "exp": 129,
-        "stage": 1,
+        "exp": 153,
+        "stage": 2,
         "stage_max": 3
+    },
+    "inv": {
+        "coin": 5940
     }
 }
