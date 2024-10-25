@@ -1,3 +1,5 @@
+import datetime
+import json
 import os
 import random
 import time
@@ -47,6 +49,7 @@ async def help(interaction: discord.Interaction):
     embed.add_field(name="/info", value="Here you can see your stats", inline=False)
     embed.add_field(name="/hunt", value="Here you can fight against an enemy on your stage", inline=False)
     embed.add_field(name="/cs", value="With that, you can change your stage", inline=False)
+    embed.add_field(name="/daily", value="You can claim your daly reward", inline=False)
     await interaction.response.send_message(embed=embed, ephemeral=True)
 
 
@@ -124,10 +127,92 @@ async def cd(interaction: discord.Interaction):
     cdTime = Time(interaction.user.id)
 
     embed = discord.Embed(title="Your cool downs:", color=discord.Color.blue())
-    embed.add_field(name="Hunt", value=cdTime.gettimecd("hunt"))
-    embed.add_field(name="Info", value=cdTime.gettimecd("info"))
-    embed.add_field(name="Search", value=cdTime.gettimecd("search"))
+    embed.add_field(name="Hunt", value=cdTime.gettimecd("hunt"), inline=False)
+    embed.add_field(name="Info", value=cdTime.gettimecd("info"), inline=False)
+    embed.add_field(name="Search", value=cdTime.gettimecd("search"), inline=False)
     await interaction.response.send_message(embed=embed, ephemeral=True)
 
 
-bot.run("")
+@bot.tree.command(name="daily", description="Get your free daily reward")
+async def daily(interaction: discord.Interaction):
+    cdTime = Time(interaction.user.id)
+    if cdTime.testcd("daily"):
+        player_create(interaction.user.id, interaction.user.name)
+        embed = discord.Embed(title="Daily Reward", color=discord.Color.blue())
+        embed.add_field(name="You have collected your daily reward", value="+1000exp", inline=False)
+        await interaction.response.send_message(embed=embed, ephemeral=False)
+
+        player.exp += 1000
+    else:
+        embed = discord.Embed(title="Daily Reward", color=discord.Color.red())
+        embed.add_field(name="You have already collected your daily reward", value="", inline=False)
+        await interaction.response.send_message(embed=embed, ephemeral=True)
+    player_save()
+
+
+@bot.tree.command(name="gamble", description="You can gamble")
+async def gamble(interaction: discord.Interaction, ammount: int):
+    player_create(interaction.user.id, interaction.user.name)
+    # Lade jackpot aus globals
+    with open(f"data\\dataLibrary\\globals.json", "r") as file:
+        data = json.load(file)
+        if "casino" in data:
+            jackpot = data["casino"]["jackpot"]
+    # Lade coins aus player
+    with open(f"data\\dataPlayer\\{player.playerID}.json") as file:
+        data_coin = json.load(file)
+        if "inv" in data_coin:
+            player_coins = data_coin["inv"]["coin"]
+        else:
+            player_coins = 0
+
+    if ammount <= player_coins:
+        if ammount > 0:
+            gamble_rand = random.randint(1, 1000)
+            embed = discord.Embed(title="Gamble", color=discord.Color.dark_magenta())
+            if gamble_rand == 1:
+                player_coins += jackpot
+                jackpot = 0
+                embed.add_field(name=f"Jackpot!!! {player.playerName} earned:", value=jackpot)
+                await interaction.response.send_message(embed=embed, ephemeral=False)
+            elif gamble_rand <= 300:
+                player_coins += (ammount * 2)
+                embed.add_field(name="You have won! You earned:", value=f"{ammount * 2}", inline=False)
+                embed.add_field(name="The jackpot is:", value=jackpot)
+                await interaction.response.send_message(embed=embed, ephemeral=True)
+            else:
+                player_coins -= ammount
+                jackpot += round(ammount / 2)
+                embed.add_field(name="You lost!", value="Try again!", inline=False)
+                embed.add_field(name="The jackpot is:", value=jackpot)
+                await interaction.response.send_message(embed=embed, ephemeral=True)
+    else:
+        embed = discord.Embed(title="Gamble", color=discord.Color.dark_magenta())
+        embed.add_field(name="Not enough coins", value="You don't have enough coins to gamble with that amount", inline=False)
+        await interaction.response.send_message(embed=embed, ephemeral=True)
+
+    # Write data back to globals
+    data["casino"] = {
+        "jackpot": jackpot
+    }
+    with open(f"data\\dataLibrary\\globals.json", "w") as file:
+        json.dump(data, file, indent=4)
+
+    # Write data back to inventory
+    data_coin["inv"] = {
+        "coin": player_coins
+    }
+    with open(f"data\\dataPlayer\\{player.playerID}.json", "w") as file:
+        json.dump(data_coin, file, indent=4)
+
+
+@bot.tree.command(name="casinohelp", description="There are the Casino-Functions")
+async def casinohelp(interaction: discord.Interaction):
+    embed = discord.Embed(title="Casino-HelpCenter", color=discord.Color.red())
+    embed.add_field(name="/gamble", value="Here you can gamble with your coins", inline=False)
+    embed.add_field(name="Info", value="Casinos have a high risk of addiction and are only for entertainment", inline=False)
+    embed.add_field(name="Specs", value="0,1% Jackpot\n30% Winning\nRest Loosing", inline=False)
+    await interaction.response.send_message(embed=embed, ephemeral=True)
+
+
+bot.run("MTI5NTMwMjU1MzYxMjg0NTExOQ.Go3XdD.nZj30NeRy1VzzFWIs7z0SiK-F0kQDSZ-BbGhNI")
