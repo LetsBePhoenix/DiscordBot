@@ -1,6 +1,8 @@
 import json
 import os
 
+import cInventory
+
 
 # Klasse SPIELER
 class Player:
@@ -13,6 +15,7 @@ class Player:
         self.exp = 0
         self.stage_max = 3
         self.stage = 1
+        self.inventory = cInventory.Inventory(playerID)
         self.load_player()
 
     # Spieler-Daten aus JSON laden

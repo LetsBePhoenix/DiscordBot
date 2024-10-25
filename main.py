@@ -3,6 +3,7 @@ import json
 import os
 import random
 import time
+from email.policy import default
 
 import discord
 from discord.ext import commands
@@ -17,10 +18,9 @@ intents.message_content = True
 bot = commands.Bot(command_prefix="/", intents=intents, activity=discord.Game(name="/help"))
 
 players = {}
-
+global player
 
 def player_create(playerID, playerName):
-    global player
     player = Player(playerID, playerName)
 
 
@@ -135,19 +135,22 @@ async def cd(interaction: discord.Interaction):
 
 @bot.tree.command(name="daily", description="Get your free daily reward")
 async def daily(interaction: discord.Interaction):
+    player_create(interaction.user.id, interaction.user.name)
     cdTime = Time(interaction.user.id)
     if cdTime.testcd("daily"):
         player_create(interaction.user.id, interaction.user.name)
         embed = discord.Embed(title="Daily Reward", color=discord.Color.blue())
-        embed.add_field(name="You have collected your daily reward", value="+1000exp", inline=False)
+        embed.add_field(name="You have collected your daily reward", value="+1000 Coins\n+100 Exp", inline=False)
         await interaction.response.send_message(embed=embed, ephemeral=False)
 
-        player.exp += 1000
+        player.inventory.coin += 1000
+        player.exp += 100
     else:
         embed = discord.Embed(title="Daily Reward", color=discord.Color.red())
         embed.add_field(name="You have already collected your daily reward", value="", inline=False)
         await interaction.response.send_message(embed=embed, ephemeral=True)
     player_save()
+    player.inventory.save_inventory()
 
 
 @bot.tree.command(name="gamble", description="You can gamble")
@@ -158,30 +161,23 @@ async def gamble(interaction: discord.Interaction, ammount: int):
         data = json.load(file)
         if "casino" in data:
             jackpot = data["casino"]["jackpot"]
-    # Lade coins aus player
-    with open(f"data\\dataPlayer\\{player.playerID}.json") as file:
-        data_coin = json.load(file)
-        if "inv" in data_coin:
-            player_coins = data_coin["inv"]["coin"]
-        else:
-            player_coins = 0
 
-    if ammount <= player_coins:
+    if ammount <= player.inventory.coin:
         if ammount > 0:
             gamble_rand = random.randint(1, 1000)
             embed = discord.Embed(title="Gamble", color=discord.Color.dark_magenta())
             if gamble_rand == 1:
-                player_coins += jackpot
+                player.inventory.coin += jackpot
                 jackpot = 0
                 embed.add_field(name=f"Jackpot!!! {player.playerName} earned:", value=jackpot)
                 await interaction.response.send_message(embed=embed, ephemeral=False)
             elif gamble_rand <= 300:
-                player_coins += (ammount * 2)
+                player.inventory.coin += (ammount * 2)
                 embed.add_field(name="You have won! You earned:", value=f"{ammount * 2}", inline=False)
                 embed.add_field(name="The jackpot is:", value=jackpot)
                 await interaction.response.send_message(embed=embed, ephemeral=True)
             else:
-                player_coins -= ammount
+                player.inventory.coin -= ammount
                 jackpot += round(ammount / 2)
                 embed.add_field(name="You lost!", value="Try again!", inline=False)
                 embed.add_field(name="The jackpot is:", value=jackpot)
@@ -191,19 +187,15 @@ async def gamble(interaction: discord.Interaction, ammount: int):
         embed.add_field(name="Not enough coins", value="You don't have enough coins to gamble with that amount", inline=False)
         await interaction.response.send_message(embed=embed, ephemeral=True)
 
-    # Write data back to globals
-    data["casino"] = {
-        "jackpot": jackpot
-    }
-    with open(f"data\\dataLibrary\\globals.json", "w") as file:
-        json.dump(data, file, indent=4)
+    player.inventory.save_inventory()
 
-    # Write data back to inventory
-    data_coin["inv"] = {
-        "coin": player_coins
-    }
-    with open(f"data\\dataPlayer\\{player.playerID}.json", "w") as file:
-        json.dump(data_coin, file, indent=4)
+
+@bot.tree.command(name="inv", description="Opens the Inventory")
+async def inv(interaction: discord.Interaction):
+    embed = discord.Embed(title="Inventory", colour=discord.Color.blue())
+    player_create(interaction.user.id, interaction.user.name)
+    embed.add_field(name="Coins", value=player.inventory.coin, inline=False)
+    await interaction.response.send_message(embed=embed, ephemeral=True)
 
 
 @bot.tree.command(name="casinohelp", description="There are the Casino-Functions")

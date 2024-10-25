@@ -1,0 +1,8 @@
+{
+  "type": "Wolf",
+  "ep_min": 10,
+  "ep_max": 20,
+  "attack_dmg_min": 5,
+  "attack_dmg_max": 10,
+  "hp": 20
+}
