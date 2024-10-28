@@ -1,0 +1,422 @@
+Hier ist eine Zusammenfassung der 20 Gebiete, ihrer Monster und der jeweiligen Bosse:
+
+### **Einfache Gebiete (1-7)**
+
+1. **Lichtung im Wald**
+   - **Monster:**
+     - Rehe
+     - Wildschweine
+     - Druiden
+     - Waldgeister
+     - Kobolde
+   - **Boss:** **Waldhüter** - Ein massiver, uralter Baumgeist.
+
+2. **Magischer Garten**
+   - **Monster:**
+     - Einhörner
+     - Feen
+     - Pflanzenmonster
+     - Dryaden
+     - Gnome
+   - **Boss:** **Königin der Feen** - Eine mächtige Fee mit zauberhaften Kräften.
+
+3. **Dunkler Wald**
+   - **Monster:**
+     - Goblins
+     - Werwölfe
+     - Dunkelelfen
+     - Schattenwölfe
+     - Spinnen
+   - **Boss:** **Schattengeist** - Ein bösartiger Geist, der Dunkelheit manipuliert.
+
+4. **Verlassene Ruinen**
+   - **Monster:**
+     - Skelette
+     - Zombies
+     - Geister
+     - Mumien
+     - Fallensteller
+   - **Boss:** **Nekromant** - Ein dunkler Zauberer, der die Toten erweckt.
+
+5. **Flussufer**
+   - **Monster:**
+     - Wassergeister
+     - Krokodile
+     - Merrow (Wasserwesen)
+     - Riesige Frösche
+     - Nixies (Wasserfeen)
+   - **Boss:** **Flussserpent** - Eine riesige Schlange im Wasser.
+
+6. **Dschungel**
+   - **Monster:**
+     - Jaguare
+     - Schlangen
+     - Wildschweine
+     - Indigene Voodoo-Anhänger
+     - Rieseninsekten
+   - **Boss:** **Dschungeltitan** - Eine kolossale Kreatur aus Lianen.
+
+7. **Wüste**
+   - **Monster:**
+     - Sandwürmer
+     - Skorpione
+     - Djinn
+     - Wüstenräuber
+     - Wilde Kamele
+   - **Boss:** **Sandleviathan** - Eine gigantische Kreatur, die Sandstürme erzeugt.
+
+---
+
+### **Mittelschwere Gebiete (8-14)**
+
+8. **Eisige Tundra**
+   - **Monster:**
+     - Eisbären
+     - Frostgiganten
+     - Eiskreaturen
+     - Schneetrolle
+     - Gletschergeister
+   - **Boss:** **Frostdrache** - Ein Drache, der Eis speit.
+
+9. **Höhlen**
+   - **Monster:**
+     - Fledermäuse
+     - Höhlenmonster
+     - Goblin-Diebe
+     - Riesenskorpione
+     - Lauerer
+   - **Boss:** **Höhlenbehemoth** - Ein riesiges Monster, das Gegner zerquetscht.
+
+10. **Schneebedeckte Berge**
+    - **Monster:**
+      - Schneemenschen
+      - Eishunde
+      - Frostelementare
+      - Berggeister
+      - Kalte Wölfe
+    - **Boss:** **Eiskolosse** - Ein massiver Riese aus Eis.
+
+11. **Alte Bibliothek**
+    - **Monster:**
+      - Buchgeister
+      - Wissensbewahrer
+      - Schattenillusionisten
+      - Magische Konstrukte
+      - Verfluchte Schriftrollen
+    - **Boss:** **Arkaner Bibliothekar** - Ein mächtiger Magier, der Bücher manipuliert.
+
+12. **Unterwasserwelt**
+    - **Monster:**
+      - Sirenen
+      - Kraken
+      - Haie
+      - Wassergeister
+      - Seemonster
+    - **Boss:** **Leviathan** - Ein riesiges Seemonster.
+
+13. **Städtisches Umfeld**
+    - **Monster:**
+      - Straßenräuber
+      - Assassinen
+      - Mutanten
+      - Zauberer
+      - Gangs
+    - **Boss:** **Verbrecherboss** - Anführer einer kriminellen Organisation.
+
+14. **Verfluchtes Moor**
+    - **Monster:**
+      - Sumpfgoblins
+      - Nekromanten
+      - Wasserwichte
+      - Miasma-Dämonen
+      - Nebelgeister
+    - **Boss:** **Sumpfwitwe** - Eine dunkle Zauberin, die Flüche nutzt.
+
+---
+
+### **Schwere Gebiete (15-20)**
+
+15. **Berggipfel**
+    - **Monster:**
+      - Steinmonster
+      - Riesige Adler
+      - Bergtrolle
+      - Frostgolems
+      - Yetis
+    - **Boss:** **Steingolem** - Eine gigantische Felsen-Kreatur.
+
+16. **Vulkanische Region**
+    - **Monster:**
+      - Feerdämonen
+      - Magmaelementare
+      - Salamander
+      - Lavagolems
+      - Aschegeister
+    - **Boss:** **Feerelementar** - Ein mächtiges Feuerwesen.
+
+17. **Schattendimension**
+    - **Monster:**
+      - Schattenwesen
+      - Albträume
+      - Umbra-Geister
+      - Dunkle Kreaturen
+      - Phantome
+    - **Boss:** **Dunkler Oberherr** - Ein mächtiges Wesen, das Schatten kontrolliert.
+
+18. **Himmelsstadt**
+    - **Monster:**
+      - Wolkenwesen
+      - Luftdämonen
+      - Griffons
+      - Schwebende Magier
+      - Lichtelfen
+    - **Boss:** **Sturm-Arkanist** - Ein mächtiger Magier, der das Wetter manipuliert.
+
+19. **Zukunftsstadt**
+    - **Monster:**
+      - Robotergardisten
+      - Cyber-Mutanten
+      - Hacker-Gegner
+      - Künstliche Intelligenzen
+      - Droiden
+    - **Boss:** **Cybernetischer Oberherr** - Ein technologisch fortgeschrittenes Wesen.
+
+20. **Tiefen des Ozeans**
+    - **Monster:**
+      - Tiefseemonster
+      - Fischmenschen
+      - Leviathane
+      - Quallen-Gegner
+      - Geister von Schiffswracks
+    - **Boss:** **Kraken** - Ein legendäres Seemonster mit riesigen Tentakeln.
+
+Diese Zusammenfassung bietet einen Überblick über die Gebiete, deren Monster und die jeweiligen Bossgegner. Wenn du noch weitere Informationen oder Anpassungen benötigst, lass es mich wissen!
+
+
+
+
+Hier ist das Dungeon-Design mit den 20 Ebenen, sortiert nach Schwierigkeitsgrad, von der einfachsten bis zur schwierigsten Ebene:
+
+### Dungeon: Der Schattenpfad (Sortiert nach Schwierigkeitsgrad)
+
+#### Ebene 1: Die Verlassenen Hallen
+- **Skelettkrieger**
+- **Ratten**
+- **Spinnen**
+- **Zombies**
+- **Ghul**
+
+**Boss:** **Wächter der Hallen**
+
+---
+
+#### Ebene 2: Die Dunklen Katakomben
+- **Ghul**
+- **Dämonische Fledermäuse**
+- **Vampir**
+- **Schattenwesen**
+- **Wilde Hunde**
+
+**Boss:** **Der Blutige Baron**
+
+---
+
+#### Ebene 3: Der Vergessene Garten
+- **Blütenmonster**
+- **Giftige Schlangen**
+- **Hölzerne Golems**
+- **Mantisartige Kreaturen**
+- **Zombies**
+
+**Boss:** **Die Pflanzenkönigin**
+
+---
+
+#### Ebene 4: Die Verfluchte Mine
+- **Bergmonster**
+- **Goblins**
+- **Spinnen**
+- **Untote Minenarbeiter**
+- **Kriechende Schatten**
+
+**Boss:** **Der Minenfürst**
+
+---
+
+#### Ebene 5: Die Finstere Bibliothek
+- **Buchgeister**
+- **Illusionszauberer**
+- **Schattenskripte**
+- **Raben**
+- **Magische Klingen**
+
+**Boss:** **Der Verfluchte Bibliothekar**
+
+---
+
+#### Ebene 6: Die Kristallhöhle
+- **Goblins**
+- **Steinmännchen**
+- **Kristallspinnen**
+- **Elementare**
+- **Schlangen**
+
+**Boss:** **Der Kristallgeist**
+
+---
+
+#### Ebene 7: Der Nebelwald
+- **Waldgeister**
+- **Erschreckende Tiere**
+- **Nymphen**
+- **Schattenwölfe**
+- **Zwerge**
+
+**Boss:** **Die Nebelkönigin**
+
+---
+
+#### Ebene 8: Die Alchemistenkammer
+- **Alchemistische Konstrukte**
+- **Goblins**
+- **Seltsame Kreaturen**
+- **Alchemistengeister**
+- **Schnecken**
+
+**Boss:** **Der Alchemistenmeister**
+
+---
+
+#### Ebene 9: Der Eiskeller
+- **Eisgeister**
+- **Frostgoblins**
+- **Eishunde**
+- **Eismumien**
+- **Schneeäffchen**
+
+**Boss:** **Der Eisfürst**
+
+---
+
+#### Ebene 10: Die Blutarenen
+- **Blutige Gladiatoren**
+- **Kampfmonster**
+- **Schattenkrieger**
+- **Dämonen**
+- **Mörderische Wölfe**
+
+**Boss:** **Der Arena-Meister**
+
+---
+
+#### Ebene 11: Die Astralebene
+- **Astralwesen**
+- **Sternengeister**
+- **Phantomwölfe**
+- **Elementare**
+- **Illusionsgeister**
+
+**Boss:** **Der Astralherrscher**
+
+---
+
+#### Ebene 12: Die Unheilige Höhle
+- **Dämonische Kreaturen**
+- **Untote**
+- **Dunkle Elementare**
+- **Zombies**
+- **Wilde Tiere**
+
+**Boss:** **Der Dunkelheitsfürst**
+
+---
+
+#### Ebene 13: Die Sirenenlagune
+- **Sirenengeschöpfe**
+- **Wassergeister**
+- **Krakenarme**
+- **Schlangen**
+- **Reptilien**
+
+**Boss:** **Die Sirenenkönigin**
+
+---
+
+#### Ebene 14: Die Schattenfestung
+- **Schattenkrieger**
+- **Ninja-Goblins**
+- **Dunkelheitsgeister**
+- **Dämonen**
+- **Schattenwesen**
+
+**Boss:** **Der Schattenfürst**
+
+---
+
+#### Ebene 15: Die Ruinen der Ahnen
+- **Untote Krieger**
+- **Wilde Tiere**
+- **Mumien**
+- **Goblins**
+- **Skelettbogenschützen**
+
+**Boss:** **Der Fluch des Ahnen**
+
+---
+
+#### Ebene 16: Der Tempel des Wahnsinns
+- **Wahnsinnige**
+- **Dämonische Wesen**
+- **Seelenfresser**
+- **Ritualisten**
+- **Kultisten**
+
+**Boss:** **Der Wahnsinnige Altar**
+
+---
+
+#### Ebene 17: Der Fluch des Ahnen
+- **Untote Krieger**
+- **Wilde Tiere**
+- **Mumien**
+- **Goblins**
+- **Skelettbogenschützen**
+
+**Boss:** **Der Fluch des Ahnen**
+
+---
+
+#### Ebene 18: Der Dunkle König
+- **Dunkle Ritter**
+- **Eisige Drachen**
+- **Mächtige Untote**
+- **Höllische Wesen**
+- **Finsterzauberer**
+
+**Boss:** **Der Dunkle König**
+
+---
+
+#### Ebene 19: Die Zeitruine
+- **Verlorene Seelen**
+- **Altertümliche Geister**
+- **Zeitschreiber**
+- **Schatten**
+- **Wächter der Zeit**
+
+**Boss:** **Der Zeitmeister**
+
+---
+
+#### Ebene 20: Der Thron der Dunkelheit
+- **Dunkle Ritter**
+- **Eisige Drachen**
+- **Mächtige Untote**
+- **Höllische Wesen**
+- **Finsterzauberer**
+
+**Boss:** **Der Dunkle König**
+
+---
+
+Diese Anordnung bietet eine kontinuierliche Steigerung der Herausforderungen und ermöglicht den Spielern, sich auf die zunehmend mächtigeren Gegner und Bosskämpfe vorzubereiten. Viel Spaß beim Spielen!

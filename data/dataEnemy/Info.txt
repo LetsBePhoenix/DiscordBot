@@ -1,0 +1,193 @@
+Here’s a summary of the 20 areas, their monsters, and the respective bosses in English:
+
+### **Easy Areas (1-7)**
+
+1. **Clearing in the Woods**
+   - **Monsters:**
+     - Deer
+     - Wild Boars
+     - Druids
+     - Forest Spirits
+     - Goblins
+   - **Boss:** **Forest Guardian** - A massive ancient tree spirit.
+
+2. **Magical Garden**
+   - **Monsters:**
+     - Unicorns
+     - Fairies
+     - Plant Monsters
+     - Dryads
+     - Gnomes
+   - **Boss:** **Queen of Fairies** - A powerful fairy with enchanting powers.
+
+3. **Dark Forest**
+   - **Monsters:**
+     - Goblins
+     - Werewolves
+     - Dark Elves
+     - Shadow Wolves
+     - Spiders
+   - **Boss:** **Shadow Wraith** - A malevolent spirit that manipulates darkness.
+
+4. **Abandoned Ruins**
+   - **Monsters:**
+     - Skeletons
+     - Zombies
+     - Ghosts
+     - Mummies
+     - Trappers
+   - **Boss:** **Necromancer** - A dark sorcerer who raises the dead.
+
+5. **Riverbank**
+   - **Monsters:**
+     - Water Spirits
+     - Crocodiles
+     - Merrow (Water Creatures)
+     - Giant Frogs
+     - Nixies (Water Fairies)
+   - **Boss:** **River Serpent** - A giant snake lurking in the water.
+
+6. **Jungle**
+   - **Monsters:**
+     - Jaguars
+     - Snakes
+     - Wild Boars
+     - Indigenous Voodoo Practitioners
+     - Giant Insects
+   - **Boss:** **Jungle Titan** - A colossal creature made of vines.
+
+7. **Desert**
+   - **Monsters:**
+     - Sandworms
+     - Scorpions
+     - Djinn
+     - Desert Raiders
+     - Wild Camels
+   - **Boss:** **Sand Leviathan** - A gigantic creature that creates sandstorms.
+
+---
+
+### **Medium Areas (8-14)**
+
+8. **Icy Tundra**
+   - **Monsters:**
+     - Polar Bears
+     - Frost Giants
+     - Ice Creatures
+     - Snow Trolls
+     - Glacier Spirits
+   - **Boss:** **Frost Dragon** - A dragon that breathes ice.
+
+9. **Caves**
+   - **Monsters:**
+     - Bats
+     - Cave Monsters
+     - Goblin Thieves
+     - Giant Scorpions
+     - Stalkers
+   - **Boss:** **Cave Behemoth** - A giant monster that crushes opponents.
+
+10. **Snow-Covered Mountains**
+    - **Monsters:**
+      - Snow People
+      - Ice Hounds
+      - Frost Elementals
+      - Mountain Spirits
+      - Cold Wolves
+    - **Boss:** **Ice Colossus** - A massive giant made of ice.
+
+11. **Ancient Library**
+    - **Monsters:**
+      - Book Spirits
+      - Knowledge Keepers
+      - Shadow Illusionists
+      - Magical Constructs
+      - Cursed Scrolls
+    - **Boss:** **Arcane Librarian** - A powerful mage who manipulates books.
+
+12. **Underwater World**
+    - **Monsters:**
+      - Sirens
+      - Kraken
+      - Sharks
+      - Water Spirits
+      - Sea Monsters
+    - **Boss:** **Leviathan** - A massive sea monster.
+
+13. **Urban Environment**
+    - **Monsters:**
+      - Street Thieves
+      - Assassins
+      - Mutants
+      - Sorcerers
+      - Gangs
+    - **Boss:** **Crime Lord** - The leader of a criminal organization.
+
+14. **Cursed Marsh**
+    - **Monsters:**
+      - Swamp Goblins
+      - Necromancers
+      - Water Wights
+      - Miasma Demons
+      - Fog Spirits
+    - **Boss:** **Swamp Witch** - A dark sorceress who uses curses.
+
+---
+
+### **Hard Areas (15-20)**
+
+15. **Mountain Peak**
+    - **Monsters:**
+      - Stone Monsters
+      - Giant Eagles
+      - Mountain Trolls
+      - Frost Golems
+      - Yetis
+    - **Boss:** **Stone Golem** - A giant creature made of rock.
+
+16. **Volcanic Region**
+    - **Monsters:**
+      - Fire Demons
+      - Magma Elementals
+      - Salamanders
+      - Lava Golems
+      - Ash Spirits
+    - **Boss:** **Fire Elemental** - A powerful being of fire.
+
+17. **Shadow Dimension**
+    - **Monsters:**
+      - Shadow Beings
+      - Nightmares
+      - Umbra Spirits
+      - Dark Creatures
+      - Phantoms
+    - **Boss:** **Dark Overlord** - A powerful being that controls shadows.
+
+18. **Sky City**
+    - **Monsters:**
+      - Cloud Beings
+      - Air Demons
+      - Griffons
+      - Floating Mages
+      - Light Elves
+    - **Boss:** **Storm Archmage** - A powerful mage who manipulates the weather.
+
+19. **Future City**
+    - **Monsters:**
+      - Robotic Guards
+      - Cyber Mutants
+      - Hacker Enemies
+      - Artificial Intelligences
+      - Drones
+    - **Boss:** **Cybernetic Overlord** - A technologically advanced being.
+
+20. **Deep Ocean**
+    - **Monsters:**
+      - Deep Sea Monsters
+      - Fish People
+      - Leviathans
+      - Jellyfish Enemies
+      - Shipwreck Spirits
+    - **Boss:** **Kraken** - A legendary sea monster with massive tentacles.
+
+This summary provides an overview of the areas, their monsters, and the respective bosses. If you need more details or further adjustments, let me know!

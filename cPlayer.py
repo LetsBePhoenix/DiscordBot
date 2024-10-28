@@ -77,3 +77,10 @@ class Player:
             if int(data[nextLevel]) <= self.exp:
                 self.exp -= data[nextLevel]
                 self.lvl += 1
+
+    def next_level(self):
+        level_file_path = f"data\\dataLibrary\\playerLevel.json"
+        with open(level_file_path, "r") as file:
+            data = json.load(file)
+            nextLevel = f"lvl{self.lvl + 1}"
+            return data[nextLevel]
