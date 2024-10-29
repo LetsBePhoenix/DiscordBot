@@ -11,9 +11,12 @@ class Player:
         self.playerName = str(playerName)
         self.lvl = 1
         self.hp = 10
+        self.hp_max = None
         self.mp = 20
+        self.mp_max = None
+        self.dmg = None
         self.exp = 0
-        self.stage_max = 3
+        self.stage_max = 1
         self.stage = 1
         self.inventory = cInventory.Inventory(playerID)
         self.load_player()
@@ -48,6 +51,13 @@ class Player:
             data[self.playerID] = self.playerName
             with open(library_file_path, "w") as file:
                 json.dump(data, file, indent=4)
+
+        with open("data\\dataLibrary\\playerDefaultStats.json", "r") as file:
+            data = json.load(file)
+            if f"lvl{self.lvl}" in data:
+                self.dmg = data[f"lvl{self.lvl}"]["dmg"]
+                self.hp_max = data[f"lvl{self.lvl}"]["hp"]
+                self.mp_max = data[f"lvl{self.lvl}"]["mp"]
 
     def save_player(self):
         if os.path.exists(f"data\\dataPlayer\\{self.playerID}.json"):

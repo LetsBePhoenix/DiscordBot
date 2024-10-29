@@ -1,5 +1,9 @@
 {
     "casino": {
-        "jackpot": 3194
+        "jackpot": 53244
+    },
+    "boss": {
+        "stage1": 11,
+        "stage2": 11
     }
 }

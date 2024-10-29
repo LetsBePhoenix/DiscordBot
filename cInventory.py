@@ -1,7 +1,6 @@
 # Klasse Inventory
 import json
 import os.path
-from textwrap import indent
 
 
 class Inventory:

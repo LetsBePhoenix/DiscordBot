@@ -1,0 +1,185 @@
+Here's a summary of the 10 dungeon levels, including the enemies guarding them, the respective drops for crafting weapons and armor, and the bosses who drop keys to the next level.
+
+---
+
+### Level 1: The Hidden Grove
+- **Enemies**:
+  1. **Forest Wolf**
+     - *Drops*: Wolf Hide (2), Forest Silver Fiber (1)
+  2. **Wild Boar**
+     - *Drops*: Boar Tusk (1), Boar Hide (1)
+  3. **Black Spider**
+     - *Drops*: Spider Silk (2), Toxic Threads (1)
+  4. **Fairy Creature**
+     - *Drops*: Fairy Dust (1), Flower Pollen (2)
+  5. **Haunting Spirit**
+     - *Drops*: Spirit Essence (1), Ancient Bark Pieces (1)
+
+- **Boss**: **Guardian of the Grove**
+  - *Drop*: Key of the Hidden Grove (opens the door to the next level)
+
+---
+
+### Level 2: The Twilight Forest
+- **Enemies**:
+  1. **Poison Oak**
+     - *Drops*: Poison Sap (1), Twilight Wood (2)
+  2. **Twilight Ghost**
+     - *Drops*: Shadow Dust (2), Spirit Essence (1)
+  3. **Stinging Flies**
+     - *Drops*: Stinger (2), Sting Bag (1)
+  4. **Twilight Wolf**
+     - *Drops*: Wolf Pelt (1), Speed Herb (1)
+  5. **Ferocious Spider**
+     - *Drops*: Frost Spider Silk (1), Twilight Forest Herbs (1)
+
+- **Boss**: **The Shadow Hunter**
+  - *Drop*: Key of the Twilight Forest (opens the door to the next level)
+
+---
+
+### Level 3: The Jungle of Twilight
+- **Enemies**:
+  1. **Jungle Snake**
+     - *Drops*: Snake Skin (2), Venom Scale (1)
+  2. **Jungle Warrior**
+     - *Drops*: War Vine (1), Exotic Materials (2)
+  3. **Black Panther**
+     - *Drops*: Panther Fur (1), Panther Claw (2)
+  4. **Poison Beetle**
+     - *Drops*: Poison Bag (1), Beetle Carapace (1)
+  5. **Wild Hunter Spirit**
+     - *Drops*: Spirit Essence (2), Jungle Artifact (1)
+
+- **Boss**: **The Jungle King**
+  - *Drop*: Key of the Jungle (opens the door to the next level)
+
+---
+
+### Level 4: The Jungle Temple
+- **Enemies**:
+  1. **Temple Guardian**
+     - *Drops*: Guardian Armor Piece (1), Ancient Coin (2)
+  2. **Basilisk**
+     - *Drops*: Basilisk Scale (1), Eye Juice (1)
+  3. **Shaman Spirit**
+     - *Drops*: Spiritual Relic (1), Ancient Ritual Symbol (1)
+  4. **Jungle Demon**
+     - *Drops*: Demon Blood (2), Cursed Amulet (1)
+  5. **Temple Spider**
+     - *Drops*: Demonic Spider Silk (1), Exotic Poison Stinger (1)
+
+- **Boss**: **The Temple Spirit**
+  - *Drop*: Key of the Temple (opens the door to the next level)
+
+---
+
+### Level 5: The Mountain Path
+- **Enemies**:
+  1. **Stone Monster**
+     - *Drops*: Rock Fragment (2), Mountain Metal Core (1)
+  2. **Cliff Ghost**
+     - *Drops*: Earth Essence (1), Rock Chips (1)
+  3. **Eagle**
+     - *Drops*: Eagle Feather (2), Beak (1)
+  4. **Mountain Troll**
+     - *Drops*: Troll Hide (1), Mountain Stone Fragment (2)
+  5. **Stone Turtle**
+     - *Drops*: Shell Fragment (2), Earth Core (1)
+
+- **Boss**: **The Glacier Giant**
+  - *Drop*: Key of the Mountain Path (opens the door to the next level)
+
+---
+
+### Level 6: The Windy Heights
+- **Enemies**:
+  1. **Wind Spirit**
+     - *Drops*: Air Essence (2), Wind Scale (1)
+  2. **Icicle**
+     - *Drops*: Icicle Fragment (1), Frost Drops (1)
+  3. **Highland Eagle**
+     - *Drops*: Eagle Feather (2), Wings (1)
+  4. **Frost Wolf**
+     - *Drops*: Frost Fur (1), Wolf Paw (2)
+  5. **Snow Leopard**
+     - *Drops*: Leopard Fur (1), Claw (2)
+
+- **Boss**: **The Storm Wind Spirit**
+  - *Drop*: Key of the Windy Heights (opens the door to the next level)
+
+---
+
+### Level 7: The Ice Caverns
+- **Enemies**:
+  1. **Ice Hound**
+     - *Drops*: Ice Hound Fur (1), Ice Fang (1)
+  2. **Frost Spider**
+     - *Drops*: Frost Spider Silk (2), Cold Bag (1)
+  3. **Glacier Giant**
+     - *Drops*: Glacier Metal (1), Ice Fragment (2)
+  4. **Ice Creature**
+     - *Drops*: Ice Essence (1), Frost Scale (1)
+  5. **Frost Ghost**
+     - *Drops*: Frost Ghost Dust (2), Cold Spirit Essence (1)
+
+- **Boss**: **The Frost Dragon**
+  - *Drop*: Key of the Ice Caverns (opens the door to the next level)
+
+---
+
+### Level 8: The Frost Fortress
+- **Enemies**:
+  1. **Ice Knight**
+     - *Drops*: Knight Armor Piece (1), Cold Metal (2)
+  2. **Frost Dragon**
+     - *Drops*: Dragon Hide (1), Dragon Tooth (2)
+  3. **Royal Frost Spirit**
+     - *Drops*: Ice Essence (1), Royal Amulet (1)
+  4. **Ice Highland Shooter**
+     - *Drops*: Cold Arrows (5), Iron Fragment (1)
+  5. **Frost Fire Spirit**
+     - *Drops*: Fire Spirit Dust (1), Magical Cold Essence (1)
+
+- **Boss**: **The Ice Knight**
+  - *Drop*: Key of the Frost Fortress (opens the door to the next level)
+
+---
+
+### Level 9: The Lava Chasm
+- **Enemies**:
+  1. **Fire Spirit**
+     - *Drops*: Flame Essence (2), Glow Core (1)
+  2. **Lava Creature**
+     - *Drops*: Lava Scale (1), Magma Fragment (2)
+  3. **Fire Demon**
+     - *Drops*: Demon Fire (1), Demon Stone (1)
+  4. **Inferno Vassal**
+     - *Drops*: Inferno Steel (1), Glow Stone (2)
+  5. **Flame Salamander**
+     - *Drops*: Salamander Hide (1), Fire Potion (1)
+
+- **Boss**: **The Fire Lord**
+  - *Drop*: Key of the Lava Chasm (opens the door to the next level)
+
+---
+
+### Level 10: The Fire Abyss
+- **Enemies**:
+  1. **Fire Dragon**
+     - *Drops*: Dragon Fire (2), Dragon Hide (1)
+  2. **Inferno Vassal**
+     - *Drops*: Inferno Steel (1), Glow Stone (2)
+  3. **Fire Ghost**
+     - *Drops*: Spiritual Flame Fire (1), Magical Fire Essence (1)
+  4. **Magma Golem**
+     - *Drops*: Magma Core (1), Golem Hide (1)
+  5. **Hellfire Demon**
+     - *Drops*: Hellfire (1), Demon Heart (1)
+
+- **Boss**: **The Hell Lord**
+  - *Drop*: Key of the Fire Abyss (opens the exit of the dungeon or provides a reward)
+
+---
+
+This overview provides players with a clear understanding of what enemies to expect and what materials they need to craft their equipment throughout the various dungeon levels. Each boss presents a unique challenge and plays a crucial role in progressing through the dungeon!

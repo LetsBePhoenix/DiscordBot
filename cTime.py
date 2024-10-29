@@ -11,6 +11,7 @@ class Time:
         self.cd_info = 0
         self.cd_search = 0
         self.cd_daily = 0
+        self.cd_boss = 0
 
         self.getcd()
 
@@ -24,6 +25,7 @@ class Time:
                     self.cd_info = data["cd"]["cd_info"]
                     self.cd_search = data["cd"]["cd_search"]
                     self.cd_daily = data["cd"]["cd_daily"]
+                    self.boss = data["cd"]["cd_boss"]
 
     def savecd(self):
         if os.path.exists(f"data\\dataPlayer\\{self.playerID}.json"):
@@ -36,7 +38,8 @@ class Time:
             "cd_hunt": self.cd_hunt,
             "cd_info": self.cd_info,
             "cd_search": self.cd_search,
-            "cd_daily": self.cd_daily
+            "cd_daily": self.cd_daily,
+            "cd_boss": self.cd_boss
         }
         with open(f"data\\dataPlayer\\{self.playerID}.json", "w") as file:
             json.dump(data, file, indent=4)
@@ -70,6 +73,13 @@ class Time:
                 return True
             else:
                 return False
+        if type == "boss":
+            if self.cd_boss + 10 <= round(time.time()):
+                self.cd_boss == round(time.time())
+                self.savecd()
+                return True
+            else:
+                return False
 
     def gettimecd(self, type):
         if type == "hunt":
@@ -95,3 +105,9 @@ class Time:
                 return "Already collected"
             else:
                 return "Ready"
+        if type == "boss":
+            cd = 10
+            if self.cd_boss + cd <= round(time.time()):
+                return "Ready"
+            else:
+                return f"{self.cd_boss + cd - round(time.time())}"

@@ -1,26 +1,50 @@
 {
-  "deer": {
-    "name": "Deer",
-    "hp": 10,
+  "op1": {
+    "name": "Wild Boar",
+    "hp": 5,
     "exp_min": 1,
     "exp_max": 5,
     "dmg_min": 0,
     "dmg_max": 1
   },
-  "boar": {
-    "name": "Boar",
+  "op2": {
+    "name": "Black Spider",
     "hp": 10,
     "exp_min": 3,
     "exp_max": 10,
     "dmg_min": 0,
     "dmg_max": 5
   },
-  "wolf": {
-    "name": "Wolf",
+  "op3": {
+    "name": "Forest Wolf",
     "hp": 15,
     "exp_min": 5,
     "exp_max": 20,
     "dmg_min": 1,
     "dmg_max": 15
+  },
+  "op4": {
+    "name": "Haunting Spirit",
+    "hp": 20,
+    "exp_min": 7,
+    "exp_max": 20,
+    "dmg_min": 5,
+    "dmg_max": 15
+  },
+  "op5": {
+    "name": "Fairy",
+    "hp": 30,
+    "exp_min": 15,
+    "exp_max": 30,
+    "dmg_min": 10,
+    "dmg_max": 20
+  },
+  "boss": {
+    "name": "Guardian of the Grove",
+    "hp": 100,
+    "exp_min": 100,
+    "exp_max": 150,
+    "dmg_min": 30,
+    "dmg_max": 50
   }
 }

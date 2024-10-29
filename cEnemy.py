@@ -61,20 +61,28 @@ class Enemy:
     def get_enemy_from_stage(self):
         if self.stage == 1:
             randtype = random.randint(1, 100)
-            if randtype <= 40:
-                self.type = "deer"
-            elif randtype <= 80:
-                self.type = "boar"
+            if randtype <= 30:
+                self.type = "op1"
+            elif randtype <= 70:
+                self.type = "op2"
+            elif randtype <= 90:
+                self.type = "op3"
+            elif randtype <= 99:
+                self.type = "op4"
             else:
-                self.type = "wolf"
+                self.type = "op5"
         if self.stage == 2:
             randtype = random.randint(1, 100)
-            if randtype <= 40:
-                self.type = "slime"
-            elif randtype <= 80:
-                self.type = "living_rock"
+            if randtype <= 30:
+                self.type = "op1"
+            elif randtype <= 60:
+                self.type = "op2"
+            elif randtype <= 90:
+                self.type = "op3"
+            elif randtype <= 95:
+                self.type = "op4"
             else:
-                self.type = "rock_wolf"
+                self.type = "op5"
         if self.stage == 3:
             randtype = random.randint(1, 100)
             if randtype <= 40:

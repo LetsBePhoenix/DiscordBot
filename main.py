@@ -1,9 +1,8 @@
-import datetime
+from datetime import *
 import json
 import os
 import random
 import time
-from email.policy import default
 
 import discord
 from discord.ext import commands
@@ -11,6 +10,7 @@ from discord.ext import commands
 from cPlayer import Player
 from cEnemy import Enemy
 from cTime import Time
+from cBoss import Boss
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -28,6 +28,7 @@ def player_create(playerID, playerName):
 def player_save():
     player.try_levelup(player.lvl)
     player.save_player()
+    player.inventory.save_inventory()
 
 
 @bot.event
@@ -60,6 +61,7 @@ async def stats(interaction: discord.Interaction):
         embed.add_field(name="Exp", value=f"{player.exp}/{player.next_level()}", inline=False)
         embed.add_field(name="HP", value=player.hp, inline=False)
         embed.add_field(name="MP", value=player.mp, inline=False)
+        embed.add_field(name="Dmg", value=player.dmg, inline=False)
         embed.add_field(name="Stage", value=f"{player.stage}/{player.stage_max}", inline=False)
         await interaction.response.send_message(embed=embed, ephemeral=False)
 
@@ -80,17 +82,54 @@ async def hunt(interaction: discord.Interaction):
         # Code
         enemy = Enemy(player.stage)
         enemy_exp = random.randint(enemy.exp_min, enemy.exp_max)
-        enemy_dmg = random.randint(enemy.dmg_min, enemy.dmg_max)
-        embed = discord.Embed(title=f"{enemy.name}: {enemy.rarity}", color=enemy.enemy_color)
-        embed.add_field(name="HP", value=f"{enemy.hp}/{enemy.hp_max}", inline=False)
-        embed.add_field(name="Exp", value=f"{enemy_exp}", inline=False)
-        embed.add_field(name="Dmg", value=f"{enemy_dmg}", inline=False)
-        if enemy.rarity == "Legendary" or enemy.rarity == "Mythic":
-            await interaction.response.send_message(embed=embed, ephemeral=False)
+        dmg = 0
+        run_one = True
+        if player.dmg >= enemy.hp_max:
+            embed = discord.Embed(title=f"{enemy.name}: {enemy.rarity}", color=enemy.enemy_color)
+            embed.add_field(name="Congratulations you won!", value="", inline=False)
+            embed.add_field(name="HP", value=f"{enemy.hp_max}")
+            embed.add_field(name="Exp", value=f"{enemy_exp}")
+            embed.add_field(name=f"You took {dmg} damage!", value="", inline=False)
         else:
-            await interaction.response.send_message(embed=embed, ephemeral=True)
+            enemy.hp -= player.dmg
+            while player.dmg < enemy.hp:
+                dmg_now = random.randint(enemy.dmg_min, enemy.dmg_max)
+                dmg += dmg_now
 
-        player.exp += enemy_exp
+                enemy.hp -= player.dmg
+                player.hp -= dmg_now
+                if player.hp <= 0:
+                    if run_one:
+                        embed = discord.Embed(title="You died!", color=discord.Color.red())
+                        player.inventory.coin -= round(player.inventory.coin / 2)
+                        embed.add_field(name=f"You lost {player.inventory.coin} Coins", value="")
+                        run_one = False
+                    try:
+                        await interaction.response.send_message(embed=embed, ephemeral=True)
+                        player.hp = player.hp_max
+                        print(f"{player.playerName} died and lost {player.inventory.coin} Coins")
+                        player_save()
+                    except:
+                        pass
+                else:
+                    embed = discord.Embed(title=f"{enemy.name}: {enemy.rarity}", color=enemy.enemy_color)
+                    embed.add_field(name="Congratulations you won!", value="", inline=False)
+                    embed.add_field(name="HP", value=f"{enemy.hp_max}")
+                    embed.add_field(name="Exp", value=f"{enemy_exp}")
+                    embed.add_field(name=f"You took {dmg} damage!", value="", inline=False)
+
+        if player.hp > 0:
+            if enemy.rarity == "Legendary" or enemy.rarity == "Mythic":
+                try:
+                    await interaction.response.send_message(embed=embed, ephemeral=False)
+                except:
+                    pass
+            else:
+                try:
+                    await interaction.response.send_message(embed=embed, ephemeral=True)
+                except:
+                    pass
+            player.exp += enemy_exp
 
         # Speichere Spieler-Daten
         player_save()
@@ -99,14 +138,95 @@ async def hunt(interaction: discord.Interaction):
         await interaction.response.send_message(embed=embed, ephemeral=True)
 
 
+'''
+@bot.tree.command(name="boss", description="Fight the boss on this Stage")
+async def boss(interaction: discord.Interaction):
+    player_create(interaction.user.id, interaction.user.name)
+    cdTime = Time(interaction.user.id)
+    # load global cooldown
+    with open(f"data\\dataLibrary\\globals.json", "r") as file:
+        data = json.load(file)
+        if "boss" in data:
+            cd_public = data["boss"][f"stage{player.stage}"]
+
+    # try self cooldown
+    if cdTime.testcd("boss"):
+        hour = datetime.now()
+        hour = hour.hour
+        if cd_public < hour:
+            boss = Boss(player.stage)
+            boss_hpMax = boss.hp
+            boss_exp = random.randint(boss.exp_min, boss.exp_max)
+            dmg = 0
+            embed = discord.Embed()
+            if player.dmg >= boss.hp:
+                embed = discord.Embed(title=f"{boss.name}", color=discord.Color.orange())
+                embed.add_field(name="Congratulations you won!", value="", inline=False)
+                embed.add_field(name="HP", value=f"{boss_hpMax}")
+                embed.add_field(name="Exp", value=f"{boss_exp}")
+                embed.add_field(name=f"You took {dmg} damage!", value="", inline=False)# set public cooldown
+                with open("data\\dataLibrary\\globals.json", "r") as file:
+                    data = json.load(file)
+                data["boss"] = {
+                    f"stage{player.stage}": hour
+                }
+                with open("data\\dataLibrary\\globals.json", "w") as file:
+                    json.dump(data, file, indent=4)
+            else:
+                boss.hp -= player.dmg
+                while player.dmg < boss.hp:
+                    dmg_now = random.randint(boss.dmg_min, boss.dmg_max)
+                    dmg += dmg_now
+
+                    boss.hp -= player.dmg
+                    player.hp -= dmg_now
+                    if player.hp <= 0:
+                        embed = discord.Embed(title="You died!", color=discord.Color.red())
+                        embed.add_field(name="You lost the Fight!", value="")
+                        try:
+                            await interaction.response.send_message(embed=embed, ephemeral= True)
+                        except:
+                            pass
+                    else:
+                        embed = discord.Embed(title=f"{boss.name}", color=discord.Color.orange())
+                        embed.add_field(name="Congratulations you won!", value="", inline=False)
+                        embed.add_field(name="HP", value=f"{boss_hpMax}")
+                        embed.add_field(name="Exp", value=f"{boss_exp}")
+                        embed.add_field(name=f"You took {dmg} damage!", value="", inline=False)# set public cooldown
+                        with open("data\\dataLibrary\\globals.json", "r") as file:
+                            data = json.load(file)
+                        data["boss"] = {
+                            f"stage{player.stage}": hour
+                        }
+                        with open("data\\dataLibrary\\globals.json", "w") as file:
+                            json.dump(data, file, indent=4)
+
+            if player.hp > 0 and player.stage_max == player.stage:
+                player.exp += boss_exp
+                player.stage_max += 1
+                embed.add_field(name=f"You unlocked a new Stage{player.stage_max}", value="")
+                await interaction.response.send_message(embed=embed, ephemeral= False)
+            elif player.hp > 0:
+                await interaction.response.send_message(embed=embed, ephemeral= False)
+
+
+
+        else:
+            embed = discord.Embed(title="The Boss is already hunted!", color=discord.Color.red())
+            embed.add_field(name="All bosses are respawning every new Hour!", value="Good luck next time")
+            await interaction.response.send_message(embed=embed, ephemeral=True)
+    else:
+        embed = discord.Embed(title="Wait, there is a CoolDown!", color=discord.Color.red())
+        await interaction.response.send_message(embed=embed, ephemeral=True)
+'''
+
+
 @bot.tree.command(name="cs", description="Changes Stage +1")
-async def cs(interaction: discord.Interaction):
+async def cs(interaction: discord.Interaction, stage: int):
     player_create(interaction.user.id, interaction.user.name)
 
-    if player.stage + 1 > player.stage_max:
-        player.stage = 1
-    else:
-        player.stage += 1
+    if stage <= player.stage_max:
+        player.stage = stage
 
     embed = discord.Embed(title=f"Your stage is changed to {player.stage}", color=discord.Color.blue())
     embed.add_field(name=f"{player.stage}/{player.stage_max}", value="", inline=False)

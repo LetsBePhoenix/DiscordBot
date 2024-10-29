@@ -1,26 +1,50 @@
 {
-  "slime": {
-    "name": "Slime",
-    "hp": 20,
-    "exp_min": 10,
-    "exp_max": 25,
-    "dmg_min": 5,
-    "dmg_max": 15
-  },
-  "living_rock": {
-    "name": "Living Rock",
-    "hp": 30,
-    "exp_min": 15,
-    "exp_max": 30,
-    "dmg_min": 5,
-    "dmg_max": 20
-  },
-  "rock_wolf": {
-    "name": "Rock Wolf",
+  "op1": {
+    "name": "Poison Oak",
     "hp": 50,
     "exp_min": 20,
+    "exp_max": 40,
+    "dmg_min": 20,
+    "dmg_max": 40
+  },
+  "op2": {
+    "name": "Twilight Ghost",
+    "hp": 60,
+    "exp_min": 25,
+    "exp_max": 40,
+    "dmg_min": 25,
+    "dmg_max": 40
+  },
+  "op3": {
+    "name": "Twilight Wolf",
+    "hp": 80,
+    "exp_min": 30,
     "exp_max": 50,
-    "dmg_min": 10,
-    "dmg_max": 30
+    "dmg_min": 30,
+    "dmg_max": 50
+  },
+  "op4": {
+    "name": "Stinging Flies",
+    "hp": 30,
+    "exp_min": 10,
+    "exp_max": 15,
+    "dmg_min": 40,
+    "dmg_max": 60
+  },
+  "op5": {
+    "name": "Ferocious Spider",
+    "hp": 100,
+    "exp_min": 50,
+    "exp_max": 70,
+    "dmg_min": 50,
+    "dmg_max": 80
+  },
+  "boss": {
+    "name": "The Shadow Hunter",
+    "hp": 200,
+    "exp_min": 250,
+    "exp_max": 500,
+    "dmg_min": 100,
+    "dmg_max": 150
   }
 }

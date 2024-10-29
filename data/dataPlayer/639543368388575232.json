@@ -1,25 +1,20 @@
 {
-    "cd": {
-        "cd_hunt": 1730128408,
-        "cd_info": 1730128764,
-        "cd_search": 0,
-        "cd_daily": "2024-10-28"
-    },
     "stats": {
         "hp": 10,
         "mp": 20,
-        "lvl": 4,
-        "exp": 72,
-        "stage": 3,
-        "stage_max": 3
+        "lvl": 40,
+        "exp": 16,
+        "stage": 1,
+        "stage_max": 1
+    },
+    "cd": {
+        "cd_hunt": 1730200468,
+        "cd_info": 1730200463,
+        "cd_search": 0,
+        "cd_daily": 0,
+        "cd_boss": 0
     },
     "inv": {
-        "coin": 7540
-    },
-    "skills": {
-        "stamina": 1,
-        "strength": 1,
-        "fishing": 1,
-        "sanity": 1
+        "coin": 0
     }
 }

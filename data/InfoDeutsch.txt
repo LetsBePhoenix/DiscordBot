@@ -1,0 +1,187 @@
+Hier ist eine zusammenfassende Übersicht über die 10 Dungeon-Ebenen, einschließlich der Gegner, die sie bewachen, der jeweiligen Drops für die Herstellung von Waffen und Rüstungen sowie der Bosse, die Schlüssel zur nächsten Ebene fallen lassen.
+
+---
+
+### Ebene 1: Der Versteckte Hain
+- **Gegner**:
+  1. **Waldwolf**
+     - *Drops*: Wolfshaut (2), Waldsilberfaser (1)
+  2. **Eber**
+     - *Drops*: Eberzahn (1), Eberfell (1)
+  3. **Schwarze Spinne**
+     - *Drops*: Spinnennetz (2), Giftige Fäden (1)
+  4. **Feenwesen**
+     - *Drops*: Feystaub (1), Blütenpollen (2)
+  5. **Haingeist**
+     - *Drops*: Geistige Essenz (1), Uralte Rindenstücke (1)
+
+- **Boss**: **Der Wächter des Hains**
+  - *Drop*: Schlüssel des Versteckten Hains (öffnet die Tür zur nächsten Ebene)
+
+---
+
+### Ebene 2: Der Dämmerforst
+- **Gegner**:
+  1. **Gifteiche**
+     - *Drops*: Giftharz (1), Dämmerholz (2)
+  2. **Dämmergeist**
+     - *Drops*: Schattenstaub (2), Geistige Essenz (1)
+  3. **Stichfliegen**
+     - *Drops*: Giftstachel (2), Stichbeutel (1)
+  4. **Dämmerwolf**
+     - *Drops*: Wolfsfell (1), Schnelligkeitskraut (1)
+  5. **Wilde Spinne**
+     - *Drops*: Frostspinnennetz (1), Kräuter des Dämmerwaldes (1)
+
+- **Boss**: **Der Schattenjäger**
+  - *Drop*: Schlüssel des Dämmerforstes (öffnet die Tür zur nächsten Ebene)
+
+---
+
+### Ebene 3: Der Dschungel des Zwielichts
+- **Gegner**:
+  1. **Dschungelschlange**
+     - *Drops*: Schlangenhaut (2), Giftschuppe (1)
+  2. **Dschungelkrieger**
+     - *Drops*: Kriegsrebe (1), Exotische Materialien (2)
+  3. **Schwarzer Panther**
+     - *Drops*: Pantherfell (1), Pantherkralle (2)
+  4. **Giftiger Käfer**
+     - *Drops*: Giftbeutel (1), Käferpanzer (1)
+  5. **Wilder Jägergeist**
+     - *Drops*: Geistige Essenz (2), Dschungelartefakt (1)
+
+- **Boss**: **Der Dschungelkönig**
+  - *Drop*: Schlüssel des Dschungels (öffnet die Tür zur nächsten Ebene)
+
+---
+
+### Ebene 4: Der Dschungeltempel
+- **Gegner**:
+  1. **Tempelwächter**
+     - *Drops*: Wächterrüstungsteil (1), Antike Münze (2)
+  2. **Basilisk**
+     - *Drops*: Basiliskenschuppe (1), Augenlichtsaft (1)
+  3. **Schamanengeist**
+     - *Drops*: Spirituelles Relikt (1), Altes Ritualsymbol (1)
+  4. **Dschungeldämon**
+     - *Drops*: Dämonenblut (2), Verfluchtes Amulett (1)
+  5. **Tempelspinne**
+     - *Drops*: Dämonisches Spinnennetz (1), Exotischer Giftstachel (1)
+
+- **Boss**: **Der Tempelgeist**
+  - *Drop*: Schlüssel des Tempels (öffnet die Tür zur nächsten Ebene)
+
+---
+
+### Ebene 5: Der Bergpfad
+- **Gegner**:
+  1. **Steinmonster**
+     - *Drops*: Gesteinsfragment (2), Bergmetallkern (1)
+  2. **Felsengeist**
+     - *Drops*: Erdessenz (1), Felsensplitter (1)
+  3. **Adler**
+     - *Drops*: Adlerfeder (2), Schnabel (1)
+  4. **Bergtroll**
+     - *Drops*: Trollhaut (1), Bergsteinfragment (2)
+  5. **Steinschildkröte**
+     - *Drops*: Panzerfragment (2), Erdkern (1)
+
+- **Boss**: **Der Gletscher-Riese**
+  - *Drop*: Schlüssel des Bergpfades (öffnet die Tür zur nächsten Ebene)
+
+---
+
+### Ebene 6: Die Windige Höhe
+- **Gegner**:
+  1. **Windgeist**
+     - *Drops*: Luftessenz (2), Windschuppe (1)
+  2. **Eiszapfen**
+     - *Drops*: Eiszapfenfragment (1), Frosttropfen (1)
+  3. **Hochgebirgsadler**
+     - *Drops*: Adlerfeder (2), Schwingen (1)
+  4. **Frostwolf**
+     - *Drops*: Frostfell (1), Wolfspfote (2)
+  5. **Schneeleopard**
+     - *Drops*: Leopardenfell (1), Kralle (2)
+
+- **Boss**: **Der Sturmwindgeist**
+  - *Drop*: Schlüssel der Windigen Höhe (öffnet die Tür zur nächsten Ebene)
+
+---
+
+### Ebene 7: Die Eishöhlen
+- **Gegner**:
+  1. **Eishund**
+     - *Drops*: Eishundfell (1), Eiszahn (1)
+  2. **Frostspinne**
+     - *Drops*: Frostspinnennetz (2), Kältebeutel (1)
+  3. **Gletscherriese**
+     - *Drops*: Gletschermetall (1), Eisfragment (2)
+  4. **Eiskreatur**
+     - *Drops*: Eisessenz (1), Frostschuppe (1)
+  5. **Frostgeist**
+     - *Drops*: Frostgeiststaub (2), Kältegeist-Essenz (1)
+
+- **Boss**: **Der Frostdrache**
+  - *Drop*: Schlüssel der Eishöhlen (öffnet die Tür zur nächsten Ebene)
+
+---
+
+### Ebene 8: Die Frostfeste
+- **Gegner**:
+  1. **Eisritter**
+     - *Drops*: Ritterrüstungsteil (1), Kältemetall (2)
+  2. **Frostdrache**
+     - *Drops*: Drachenhaut (1), Drachenzahn (2)
+  3. **Königlicher Frostgeist**
+     - *Drops*: Eisessenz (1), Königliches Amulett (1)
+  4. **Eishochlandschütze**
+     - *Drops*: Kalte Pfeile (5), Eisenfragment (1)
+  5. **Frostfeuergeist**
+     - *Drops*: Feuergeiststaub (1), Magische Kälte-Essenz (1)
+
+- **Boss**: **Der Eisritter**
+  - *Drop*: Schlüssel der Frostfeste (öffnet die Tür zur nächsten Ebene)
+
+---
+
+### Ebene 9: Die Glutspalte
+- **Gegner**:
+  1. **Feuergeist**
+     - *Drops*: Flammenessenz (2), Glutkern (1)
+  2. **Lavakreatur**
+     - *Drops*: Lavaschuppe (1), Magmafragment (2)
+  3. **Feuerdämon**
+     - *Drops*: Dämonenfeuer (1), Dämonenstein (1)
+  4. **Glutfürst**
+     - *Drops*: Fürstenamulett (1), Glutstahl (1)
+  5. **Flammensalamander**
+     - *Drops*: Salamanderhaut (1), Feuertrank (1)
+
+- **Boss**: **Der Feuerfürst**
+  - *Drop*: Schlüssel der Glutspalte (öffnet die Tür zur nächsten Ebene)
+
+---
+
+### Ebene 10: Der Feuerschlund
+- **Gegner**:
+  1. **Feuerdrache**
+     - *Drops*: Drachenfeuer (2), Drachenhaut (1)
+  2. **Inferno-Vasall**
+     - *Drops*: Infernostahl (1), Glutstein (2)
+  3. **Feuergeist**
+     - *Drops*: Geistiges Flammenfeuer (1), Magische Feueressenz (1)
+  4. **Magma-Golem**
+     - *Drops*: Magma-Kern (1), Golemhaut (1)
+  5. **Höllenfeuerdämon**
+     - *Drops*: Höllenfeuer (1), Dämonenherz (1)
+
+- **Boss**: **Der Höllenfürst**
+  - *Drop*: Schlüssel des Feuerschlunds (öffnet den Ausgang des Dungeons oder die Belohn
+
+ung)
+
+---
+
+Diese Übersicht bietet den Spielern eine klare Vorstellung davon, welche Gegner sie erwarten können und welche Materialien sie benötigen, um ihre Ausrüstung in den verschiedenen Dungeon-Ebenen herzustellen. Jeder Boss stellt eine Herausforderung dar und spielt eine wichtige Rolle im Fortschritt durch den Dungeon!
