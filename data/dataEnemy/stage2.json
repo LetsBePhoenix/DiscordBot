@@ -1,5 +1,5 @@
 {
-  "op1": {
+  "enemy1": {
     "name": "Poison Oak",
     "hp": 50,
     "exp_min": 20,
@@ -7,7 +7,7 @@
     "dmg_min": 20,
     "dmg_max": 40
   },
-  "op2": {
+  "enemy2": {
     "name": "Twilight Ghost",
     "hp": 60,
     "exp_min": 25,
@@ -15,7 +15,7 @@
     "dmg_min": 25,
     "dmg_max": 40
   },
-  "op3": {
+  "enemy3": {
     "name": "Twilight Wolf",
     "hp": 80,
     "exp_min": 30,
@@ -23,7 +23,7 @@
     "dmg_min": 30,
     "dmg_max": 50
   },
-  "op4": {
+  "enemy4": {
     "name": "Stinging Flies",
     "hp": 30,
     "exp_min": 10,
@@ -31,7 +31,7 @@
     "dmg_min": 40,
     "dmg_max": 60
   },
-  "op5": {
+  "enemy5": {
     "name": "Ferocious Spider",
     "hp": 100,
     "exp_min": 50,

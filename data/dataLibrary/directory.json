@@ -1,4 +1,14 @@
 {
-  "dataPlayer": "data\\dataPlayer\\",
-  "dataEnemy": "data\\dataEnemy\\"
+  "dataEnemy": {
+    "stage1": "data\\dataEnemy\\stage1.json",
+    "stage2": "data\\dataEnemy\\stage2.json"
+  },
+  "dataPlayer": {
+    "playerLibrary": "data\\dataLibrary\\playerLibrary.json",
+    "playerLevel": "data\\dataLibrary\\playerLevel.json",
+    "playerDefaultStats": "data\\dataLibrary\\playerDefaultStats.json"
+  },
+  "dataLibrary": {
+    "globals": "data\\dataLibrary\\globals.json"
+  }
 }

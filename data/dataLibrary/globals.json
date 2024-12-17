@@ -1,9 +1,11 @@
 {
     "casino": {
-        "jackpot": 53244
+        "jackpot_gamble": 104220
     },
     "boss": {
-        "stage1": 11,
-        "stage2": 11
+        "stage1": 0,
+        "stage2": 0,
+        "stage3": 0,
+        "stage4": 0
     }
 }

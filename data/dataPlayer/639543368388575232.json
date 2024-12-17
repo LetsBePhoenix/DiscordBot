@@ -1,20 +1,23 @@
 {
     "stats": {
-        "hp": 10,
+        "hp": 35,
         "mp": 20,
-        "lvl": 40,
-        "exp": 16,
-        "stage": 1,
+        "exp": 274,
+        "lvl": 6,
+        "stage_current": 1,
         "stage_max": 1
     },
     "cd": {
-        "cd_hunt": 1730200468,
-        "cd_info": 1730200463,
+        "cd_hunt": 1734423542,
+        "cd_info": 1734424034,
         "cd_search": 0,
-        "cd_daily": 0,
+        "cd_mine": 0,
+        "cd_daily": "2024-12-03",
         "cd_boss": 0
     },
-    "inv": {
-        "coin": 0
+    "inventory": {
+        "coin": 24512176,
+        "potion_healing": 69,
+        "key_dungeon": 0
     }
 }

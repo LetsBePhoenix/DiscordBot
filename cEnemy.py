@@ -1,96 +1,79 @@
+'''
+Erstelle Klasse Gegner
+
+Hier werden alle wichtigen bereiche der klasse Gegner abgearbeitet
+'''
 import json
 import random
 
 import discord
 
+from cDirectory import Directory
 
-# Klasse GEGNER
+
 class Enemy:
     def __init__(self, stage):
-        self.type = ""
-        self.name = ""
+        self.directory = Directory()
+        self.file_path = self.get_file_path(stage)
         self.stage = stage
-        self.rarity = ""
-        self.hp = 1
-        self.hp_max = 1
-        self.exp_min = 0
-        self.exp_max = 0
+        self.type = ""
+        self.hp = 0
+        self.hp_max = 0
+        self.exp = 0
         self.dmg_min = 0
         self.dmg_max = 0
-        self.enemy_color = discord.Color.dark_grey()
-        self.load_enemy_data()
+        self.rarity = ""
+        self.enemy_color = discord.Color.dark_gray()
 
-    def load_enemy_data(self):
-        self.get_enemy_from_stage()
         self.get_rarity()
+        self.get_enemy()
 
-        file_name = f"data\\dataEnemy\\stage{self.stage}.json"
+    def get_file_path(self, stage):
+        if stage == 1:
+            return self.directory.stage1
+        elif stage == 2:
+            return self.directory.stage2
 
-        with open(file_name, "r") as file:
+    def get_enemy(self):
+        with open(self.file_path, "r") as file:
             data = json.load(file)
-            self.name = data[self.type]["name"]
-            self.hp_max = data[self.type]["hp"]
-            self.hp = self.hp_max
-            self.exp_min = data[self.type]["exp_min"]
-            self.exp_max = data[self.type]["exp_max"]
-            self.dmg_min = data[self.type]["dmg_min"]
-            self.dmg_max = data[self.type]["dmg_max"]
+            rand = random.randint(1, 100)
+            if rand <= 30:
+                e = 1
+            elif rand <= 60:
+                e = 2
+            elif rand <= 85:
+                e = 3
+            elif rand <= 95:
+                e = 4
+            else:
+                e = 5
+            # set Values
+            self.type = data[f"enemy{e}"]["name"]
+            self.hp = data[f"enemy{e}"]["hp"]
+            self.hp_max = self.hp
+            self.exp = random.randint(data[f"enemy{e}"]["exp_min"], data[f"enemy{e}"]["exp_max"])
+            self.dmg_min = data[f"enemy{e}"]["dmg_min"]
+            self.dmg_max = data[f"enemy{e}"]["dmg_max"]
 
-        # set values from rarity
-        if self.rarity == "Uncommon":
-            self.exp_min = round(self.exp_min * 1.1)
-            self.exp_max = round(self.exp_max * 1.1)
-            self.enemy_color = discord.Color.light_grey()
-        elif self.rarity == "Rare":
-            self.exp_min = round(self.exp_min * 1.2)
-            self.exp_max = round(self.exp_max * 1.2)
-            self.enemy_color = discord.Color.green()
-        elif self.rarity == "Epic":
-            self.exp_min = round(self.exp_min * 1.5)
-            self.exp_max = round(self.exp_max * 1.5)
-            self.enemy_color = discord.Color.purple()
-        elif self.rarity == "Legendary":
-            self.exp_min = round(self.exp_min * 2)
-            self.exp_max = round(self.exp_max * 2)
-            self.enemy_color = discord.Color.gold()
-        elif self.rarity == "Mythic":
-            self.exp_min = round(self.exp_min * 5)
-            self.exp_max = round(self.exp_max * 5)
-            self.enemy_color = discord.Color.pink()
+            # set values from rarity
+            if self.rarity == "Uncommon":
+                self.exp = round(self.exp * 1.1)
+                self.enemy_color = discord.Color.light_grey()
+            elif self.rarity == "Rare":
+                self.exp = round(self.exp * 1.2)
+                self.enemy_color = discord.Color.green()
+            elif self.rarity == "Epic":
+                self.exp = round(self.exp * 1.5)
+                self.enemy_color = discord.Color.purple()
+            elif self.rarity == "Legendary":
+                self.exp = round(self.exp * 2)
+                self.enemy_color = discord.Color.gold()
+            elif self.rarity == "Mythic":
+                self.exp = round(self.exp * 5)
+                self.enemy_color = discord.Color.pink()
 
-    def get_enemy_from_stage(self):
-        if self.stage == 1:
-            randtype = random.randint(1, 100)
-            if randtype <= 30:
-                self.type = "op1"
-            elif randtype <= 70:
-                self.type = "op2"
-            elif randtype <= 90:
-                self.type = "op3"
-            elif randtype <= 99:
-                self.type = "op4"
-            else:
-                self.type = "op5"
-        if self.stage == 2:
-            randtype = random.randint(1, 100)
-            if randtype <= 30:
-                self.type = "op1"
-            elif randtype <= 60:
-                self.type = "op2"
-            elif randtype <= 90:
-                self.type = "op3"
-            elif randtype <= 95:
-                self.type = "op4"
-            else:
-                self.type = "op5"
-        if self.stage == 3:
-            randtype = random.randint(1, 100)
-            if randtype <= 40:
-                self.type = "ice_slime"
-            elif randtype <= 80:
-                self.type = "ice_wolf"
-            else:
-                self.type = "ice_worm"
+
 
     def get_rarity(self):
         random_rarity = random.randint(1, 1000)

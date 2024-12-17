@@ -1,5 +1,5 @@
 {
-  "op1": {
+  "enemy1": {
     "name": "Wild Boar",
     "hp": 5,
     "exp_min": 1,
@@ -7,7 +7,7 @@
     "dmg_min": 0,
     "dmg_max": 1
   },
-  "op2": {
+  "enemy2": {
     "name": "Black Spider",
     "hp": 10,
     "exp_min": 3,
@@ -15,7 +15,7 @@
     "dmg_min": 0,
     "dmg_max": 5
   },
-  "op3": {
+  "enemy3": {
     "name": "Forest Wolf",
     "hp": 15,
     "exp_min": 5,
@@ -23,7 +23,7 @@
     "dmg_min": 1,
     "dmg_max": 15
   },
-  "op4": {
+  "enemy4": {
     "name": "Haunting Spirit",
     "hp": 20,
     "exp_min": 7,
@@ -31,7 +31,7 @@
     "dmg_min": 5,
     "dmg_max": 15
   },
-  "op5": {
+  "enemy5": {
     "name": "Fairy",
     "hp": 30,
     "exp_min": 15,
